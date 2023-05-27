@@ -29,9 +29,9 @@ export default function Header() {
                 </a>
               </li> */}
               {/* Lights switch */}
-              {/* <li>
+              <li>
                 <ThemeToggle />
-              </li> */}
+              </li>
             </ul>
           </nav>
         </div>
