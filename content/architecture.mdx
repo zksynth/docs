@@ -1,0 +1,89 @@
+---
+title: "Architecture"
+summary: "zkSynth's low-risk, highly scalable, and decentralized synthetics architecture with Segregated Debt Pools"
+topic: {
+  name: "Protocol",
+  slug: "protocol"
+}
+next: {
+  name: "Pools",
+  slug: "/protocol/pools"   
+}
+---
+
+## Protocol
+
+zkSynth's trustless synthetic asset protocol enables the issuance and trading of synthetic assets through its modular architecture is designed to provide users with a seamless and secure experience when trading synthetic assets. 
+The platform is built on Arbitrum, a leading L2 blockchain, ensuring that all transactions are fast, transparent, and secure. The following sections will delve deeper into the key features of zkSynth's modular architecture and how they provide users with a superior synthetics infrastructure.
+
+![](/images/protocol.png)
+
+### Core Layer
+
+zkSynth's debt pools are the core of the protocol. They are the mechanism through which synthetic assets are issued and traded. 
+Each debt pool is a smart contract that holds a specific synthetic asset and is backed by a specific collateral asset. 
+The debt pool is responsible for minting and burning synthetic assets, as well as managing the collateralization ratio of the synthetic asset.
+
+Also with this layer, the protocol can be extended to users and developers creating their own pools, and to support adding new synthetic assets and collateral assets.
+
+### Functionality Layer
+
+This layer adds functionality to the pools infrastructure. 
+
+1. Swaps
+
+Allows for slippage free swaps between synthetic assets. 
+
+2. Minting
+
+Users can mint synthetic assets by depositing collateral assets into the pool.
+
+3. Margin
+
+Users can borrow synthetic assets by depositing synthetic assets into the lending pool.
+
+4. Bridge
+
+Users can bridge Non-synthetics to Synthetics & Cross-Pool assets with min price impact. Powered by Balancer's Stable Pools
+
+This would allow anyone to buy synthetic assets with any asset (USDC, ETH, WBTC, etc), making it more accessible. Also issuers can provide synthetics liquidity to earn additional yield from swap fees, with no impermanent losses.
+
+5. Rewards
+
+Rewarding users for minting synthetic assets. Pools can support any ERC20 to be added as reward tokens.
+
+### Application Layer
+
+Above functionality would allow creation of a wide range on applications with synthetics assets. 
+
+1. Atomic Swaps
+
+The direct [no-slippage] exchange enables atomic swaps, designed to minimize the price impact for large orders, increase liquidity and make swaps more efficient. This is made through the use of stable-pairs, known to be most capital efficient, and have no impermanent loss.
+If someone wants to swap large amount of ETH to USDC, they can swap through 
+
+```
+
+ETH (1)---> cETH (2)---> cUSD (3)---> USDC
+```
+
+with ETH/cETH and cUSD/USDC as stable pairs
+
+This eliminates permanent loss and the need for large liquidity, and allows for a more efficient and profitable trading experience
+
+![](/images/large-orders.png)
+
+2. Perps
+
+Offering upto 125x leverage using Margin and Swap modules
+
+3. Options
+
+Binary Options to trade on derivatives. allowing users to place PUT and CALL on any asset
+
+4. Structured Products
+
+Invest in a basket of different assets, providing diversified exposure to mutiple assets. Or create your own Indicies that don't need rebalancing, CDOs, Bonds, leveraged assets and more
+
+5. Real World Assets
+
+Tapping into the $600T global derivatives industry, with a wide range of TradFi assets

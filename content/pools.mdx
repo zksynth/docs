@@ -1,0 +1,57 @@
+---
+title: "Pools"
+summary: "zkSynth uses multiple debt pools as a way to minimize risk by grouping assets together that have similar characteristics and are likely to move in the same direction. One of the most significant advantages of debt pools is that they help to minimize risk. "
+topic: {
+  name: "Protocol",
+  slug: "protocol"
+}
+next: {
+  name: "Synthetic Assets",
+  slug: "/protocol/synthetic-assets"   
+}
+---
+
+### Understanding Debt Share
+
+Let's say, Alice and Bob both want to invest $100 in synthetic assets. Alice chooses to invest her $100 in BTCX (Bitcoin Synthetic) with the price of $10000 and Bob chooses to invest his $100 in USDX (USD Synthetic) with the price of $1.
+
+When they issue these synthetic assets, as both are equal valued, they both share the debt through a global debt pool in 50%-50% pool share. So, at the beginning, the total pool debt is $100 + $100 = $200 and Alice and Bob are liable for $100 (50% pool debt share) and $100 (50% pool debt share) of the debt.
+
+Now, let's say, the price of BTCX goes up by 100% to $20000. Now, Alice's holdings would be $200 (0.01) BTCX and Bob's holdings would be $100 (100) USDC. As the price of BTCX has gone up, the total pool debt becomes $300. So, now Alice's debt share is $150 (50% pool debt share), and Bob's debt share is $150 (50% pool debt share). By comparing the initial debt share, Alice made a profit of $50 and Bob incurred a loss of $50.
+
+### Advantages of Segregated Debt Pools
+
+By grouping assets together that are similar to each other, debt pools reduce the likelihood that one asset will move in a different direction than the others, which can lead to significant losses. 
+
+This is particularly important in the world of synthetic assets, where the risk can be high due to the inherent volatility of other assets in the pool. 
+Debt pools in zkSynth consist of assets which are similar to each other, so they all move in one direction. 
+
+#### Lowered Risk
+
+Segregating assets by type, make zkSynth feel less like a trading competition. 
+By grouping assets together that have similar characteristics, debt pools reduce the pressure to constantly monitor the market and make quick trades. 
+Instead, users can deploy assets in other modules such as liquidity pools, lending/borrowing, etc which gives more value to the DeFi ecosystem.
+
+#### Lowest fees
+
+Lowers risk allows us to offer lowest fees in the market for trading. Furthermore, the fee is used to burn the debt pool's debt, which reduces the risk of the pool even more.
+When we have more users and volume, we can lower the fees even more. A part of the fees in WETH goes directly SYX holders.
+
+#### Composable
+
+One of the best things about debt pools in zkSynth is that anyone can create a debt pool with any number of assets backed by a verified price feed. 
+This allows traders to tailor debt pools to their specific needs and preferences through governance. 
+zkSynth's debt pools shall provide a flexible and customizable way to trade and invest in synthetic assets.
+
+Create your own Synthetics, and trade them on zkSynth. Build your dApp with the most scalable Synthetics architecture:
+- Perpetual Futures: Offering upto 125x Leverage on any asset
+- Indicies: Basket of Assets, without the need of re-balancing, that you can trade freely.
+- Options: Call/Put Options on any Asset
+- Atomic Lending/Borrowing: Lend/Borrow any Asset with maximum loan-to-value ratio of 98%. Loop to increase your yield, achieve arbitrage profits upto 100% APY
+- Atomic Swaps: Trade Non-Synthetics with no impermanent losses, lowest price impact. Built on Balancer Stable Pools V2
+
+### Comparision to Synthetix Debt Pool
+
+In a single global debt pool architecture, all synthetic assets are grouped together, regardless of their asset class and market risk. This approach can be problematic when it comes to risk management because it does not take into account the unique characteristics of different synthetic assets.
+
+Let's say that one synthetic asset in the global debt pool experiences a significant price drop. This can cause the overall debt in the pool to increase and make it difficult for users to manage their risk. Additionally, users who hold synthetic assets that are not affected by the price drop will still be liable for a portion of the increased debt, even though their assets have not decreased in value.

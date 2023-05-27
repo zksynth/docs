@@ -1,0 +1,50 @@
+---
+title: "Synthetic Assets"
+summary: "Synthetic assets are a form of derivatives, a digital representations of real-world assets, such as stocks, commodities, and foreign currencies. They allow traders to gain exposure to the price movements of an asset without actually owning it."
+topic: {
+  name: "Protocol",
+  slug: "protocol"
+}
+next: {
+  name: "Swaps",
+  slug: "/protocol/swaps"   
+}
+---
+
+The key difference between synthetic assets on zkSynth and other derivatives found on other DEXes, such as options or futures, is that synthetic assets are free-flowing and act tokens that can be traded, transferred, or invested in like any other ERC20 token. In other words, synthetic assets on zkSynth are not limited to just one type of derivative like options or futures, but can be used to create a wide range of derivative products, such as liquidity pools, perpetuals, lending/borrowing, and indices.
+
+You would be able to get into Synthetic Assets in two ways:
+
+## 1. Buying
+
+You can directly buy Synthetic Assets using Balancer's USDC-cUSD-fUSD Pool.
+
+#### Buying Cross Chain Cryptocurrencies
+
+Here in this example, you can get exposure to XRP by buying cXRP with USDC as follow.
+
+![](/images/xrp-with-usdc.png)
+
+#### Buying Foreign Currencies
+
+Here in this example, you can get exposure to CNY by buying cCNY with USDC as follow.
+
+![](/images/cny-with-usdc.png)
+
+## 2. Minting
+
+Minting and Burning of Synthetic Assets is handled by it's Market (Debt Pool).
+
+To mint synthetic assets on zkSynth, a user can deposit a collateral asset, such as ETH or USDC, into the protocol's liquidity pools and then issue synthetic assets against it. The user can then use these synthetic assets to trade, invest, or transfer as they see fit.
+
+### Debt Share
+
+At the time of issuance, a debt share is issued to the minter based on the total pool debt. This debt share represents the user's portion of the overall debt associated with the synthetic assets in the pool. After issuance, users can freely trade the synthetic asset in any market. The prices for synthetic assets are secured by ChainLink's decentralized oracle network, ensuring the integrity of the debt.
+Read more about Debt Pool [here](/protocol/pools).
+
+### Burn Debt
+To burn synthetic assets and redeem the collateral, the user needs to return the synthetic assets to the liquidity pool and then receive the corresponding collateral assets in return.
+
+### Liquidation
+
+In the event that a user's collateralization ratio falls below 100%, their account will be liquidated. This is a safety measure to ensure that the overall debt in the pool remains manageable and that synthetic assets are backed by sufficient collateral.

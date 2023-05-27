@@ -1,0 +1,40 @@
+---
+title: "Swaps"
+summary: "zkSynth's trustless swaps are game-changer for traders which enables users to trade synthetic assets with unparalleled ease and efficiency. Swap Price Feeds are secured by a decentralized oracle network provided by Chainlink and Pyth, which ensures that prices are accurate, reliable and updated at every swap. This eliminates the need for liquidity providers and minimizes slippage, providing a seamless trading experience for users."
+topic: {
+  name: "Protocol",
+  slug: "protocol"
+}
+next: {
+  name: "Risks",
+  slug: "/protocol/risks"   
+}
+---
+
+## Zero Slippage
+
+One of the most significant benefits of zkSynth's trustless swaps is the elimination of slippage. Slippage occurs when the price of an asset moves during the execution of a trade due to insufficient liquidity, resulting in the trader receiving a different price than the one they expected. As synthetic assets can be exchanged directly with another asset of the same value, that users always receive the price they expect, and reducing the risk of loss.
+
+## Infinite Liquidity
+
+Unlike traditional assets or even other derivatives on DEXes, synthetic assets do not require liquidity in the open market. This is because they are created through a process called minting, where users can create synthetic assets by locking collateral of equivalent value.
+This means that synthetic assets can be traded without any restrictions or limitations, even if there is no liquidity available on any other exchange or marketplace. As long as there is a corresponding synthetic asset with a valid price feed, users can freely buy or sell that asset.
+Furthermore, because synthetic assets are created through the minting process, there is no need for LPs or DEX pools to provide liquidity. This eliminates the need for users to pay any additional fees or suffer from slippage due to insufficient liquidity in the market.
+
+## Fees
+
+Minting and Burning Fee are applicable for all synthetic assets, which is distributed back to liquidity providers in the form of a debt burn. This is reduce volatility of pool debt, and also to incentivize liquidity providers to provide liquidity to the protocol.
+
+Fees for an asset swap is calculated based on a number of factors, including the market and liquidity risks associated with the underlying asset.
+To calculate the asset swap fee, we use the following formula:
+
+Asset Swap Fee = (Base Fee + Liquidity Risk Premium) x Market Risk Multiplier
+
+Where:
+- Base Fee: This is the minimum fee charged for an asset swap transaction, regardless of the market and liquidity risks associated with the underlying asset. The base fee is set and may vary depending on the type of asset being traded.
+- Liquidity Risk Premium: This is an additional fee charged for assets that are considered to be less liquid or have a higher risk of price volatility. The liquidity risk premium is calculated as a percentage of the base fee and is determined based on the market conditions and risk management policies.
+- Market Risk Multiplier: This is a factor that is applied to the base fee and liquidity risk premium to account for the overall market risk associated with the asset. The market risk multiplier is determined by the risk management team and may vary depending on the current market conditions and the asset's historical volatility.
+
+The liquidity risk premium and market risk multiplier are determined based on a number of factors, including the asset's historical trading volume, bid-ask spread, and overall volatility. These factors are assessed on an ongoing basis by the exchange's risk management team to ensure that asset swap fees accurately reflect the underlying market and liquidity risks.
+
+It's important to note that other parameters may also be necessary to calculate the asset swap fee, such as the size of the transaction and any other relevant market conditions. Additionally, the specific formula used to calculate the asset swap fee may vary depending on the exchange's policies and risk management practices.
