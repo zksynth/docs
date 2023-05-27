@@ -9,7 +9,7 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     let theme = localStorage.getItem('theme')
-    if (theme === 'dark' || theme === 'system') {
+    if (!theme || theme === 'dark' || theme === 'system') {
       setTheme('light')
       localStorage.setItem('theme', 'light')
     }
